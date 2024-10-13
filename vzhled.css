@@ -1,0 +1,18 @@
+.hra{
+    max-width: 500px;
+    height: auto;
+
+}
+
+.setting{
+    width: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.settingButtons{
+    height: 50px;
+    width: 50px;
+}
