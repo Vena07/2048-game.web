@@ -8,26 +8,20 @@
 </head>
 <body>
     <section class="hra">
-        <div class="setting">
         
-            <div class="nvm">
-                <div id="paleta">
-                    <div class="klasik">
-                        <button class="colorwhite color"></button>
-                        <button class="colorblack color"></button>
-                    </div>
-                    <div class="barvicky">
-                        <button class="colorblue color"></button>
-                        <button class="colorgreen color"></button>
-                        <button class="coloryellow color"></button>
-                    </div>
-                </div>
-                <button class="settingButtons" onclick="barvy()">🖌️</button>
-                <button class="settingButtons">🏆</button>
-                <button class="settingButtons">❔</button>
+        <div class="score">
+            <div class="score2">
+                <p class="scoretext">BEST</p>
+                <p class="scornumber">0</p>
             </div>
-            
-        </div>
+            <div class="reset">
+                <button class="restart2">↻</button>
+            </div>
+            <div class="score2">
+                <p class="scoretext">SCORE</p>
+                <p class="scorenumber">0</p>
+            </div>
+        </div> 
         <div class="board">
             <div class="row">
                 <div class="pin" id="pin11">
@@ -87,19 +81,27 @@
             </div>
             
         </div>
-        <div class="score">
-            <div class="score2">
-                <p class="scoretext">BEST</p>
-                <p class="sscornumber">0</p>
+        <div class="setting">
+        
+            <div class="nvm">
+                <div id="paleta">
+                    <div class="klasik">
+                        <button class="colorwhite color"></button>
+                        <button class="colorblack color"></button>
+                        <button class="close color" onclick="barvy()">X</button>
+                    </div>
+                    <div class="barvicky">
+                        <button class="colorblue color"></button>
+                        <button class="colorgreen color"></button>
+                        <button class="coloryellow color"></button>
+                    </div>
+                </div>
+                <button class="settingButtons" id="buttonpaleta" onclick="barvy()">🖌️</button>
+                <button class="settingButtons">🏆</button>
+                <button class="settingButtons">❔</button>
             </div>
-            <div >
-                <button class="restart2">↻</button>
-            </div>
-            <div class="score2">
-                <p class="scoretext">SCORE</p>
-                <p class="scorenumber">0</p>
-            </div>
-        </div>  
+            
+        </div>
 
     </section>
     <section>
