@@ -1,6 +1,4 @@
 body {
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,8 +27,7 @@ body {
 }
 
 .hra {
-    max-width: 100vw;
-    max-height: 100vh;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,7 +129,7 @@ body {
     align-items: center;
     margin: 5px;
     background-color: rgba(254, 150, 64, 0.877);
-    border: solid rgba(254, 126, 22, 0.877) 5px;
+    border: solid rgba(254, 126, 22, 0.877) 7px;
     border-radius: 16px;
 }
 
@@ -170,7 +167,18 @@ body {
     transition: all 0.2s ease;
 }
 
+
+
+ 
 @media (max-width: 600px) {
+    body{
+        width: 400px;
+        
+    }
+    .hra{
+        gap: 50px;
+    }
+
     .board {
         width: 300px;
         height: 300px;
@@ -180,20 +188,27 @@ body {
         width: 55px;
         height: 55px;
         margin: 3px;
+        border: solid rgba(254, 126, 22, 0.877) 5px;
     }
 
     .setting {
-        width: 300px;
+        width: 400px;
+        padding: 50px;
     }
 
+    .paleta{
+        max-width: 80px;
+        
+    }
     .color {
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
+        margin-left: 0px;
     }
 
     .settingButtons {
-        width: 45px;
-        height: 45px;
+        width: 100px;
+        height: 75px;
         font-size: 20px;
         border-radius: 10px;
     }
@@ -201,7 +216,7 @@ body {
     .score2 {
         width: 80px;
         flex-direction: column;
-        margin: 0;
+        margin: 0px;
         border-radius: 10px;
     }
 
