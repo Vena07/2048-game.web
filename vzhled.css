@@ -1,9 +1,17 @@
+/* Hra */
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(252, 223, 185);
+    
+}
+
+#hra{
+    filter:blur(0px);
+    z-index:1;
 }
 
 .colorwhite {
@@ -26,7 +34,7 @@ body {
     background-color: orange;
 }
 
-.hra {
+#hra {
     
     display: flex;
     flex-direction: column;
@@ -49,7 +57,7 @@ body {
     justify-content: center;
 }
 
-.settingButtons {
+.settingButtons{
     width: 150px;
     height: 80px;
     margin: 10px;
@@ -60,6 +68,20 @@ body {
     font-size: 45px;
     border-radius: 20px;
     transition: all 0.2s ease;
+    background-color: rgba(254, 150, 64, 0.877);
+    border: solid rgba(254, 126, 22, 0.877) 7px;
+}
+
+#paleta {
+    width: 150px;
+    height: 80px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(254, 150, 64, 0.877);
+    border: solid rgba(254, 126, 22, 0.877) 7px;
 }
 
 .close {
@@ -77,6 +99,7 @@ body {
     height: 35px;
     border-radius: 5px;
     transition: all 0.2s ease;
+    border: solid rgba(194, 96, 16, 0.877) 3px;
 }
 
 .klasik {
@@ -89,17 +112,11 @@ body {
     margin-top: 3px;
 }
 
-#paleta {
-    width: 140px;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .settingButtons:hover,
 .color:hover,
-.restart2:hover {
+.restart2:hover, .zavrit:hover {
     transform: scale(1.1);
 }
 
@@ -167,38 +184,67 @@ body {
     transition: all 0.2s ease;
 }
 
+#napovedaokno{
+    width: 500px;
+    height: 550px;
+    display: none;
+    justify-content: center;
+    border: solid rgba(254, 126, 22, 0.877) 7px;
+    position: absolute;
+    background-color: rgba(241, 154, 82);
+    z-index: 1;
+    border-radius: 16px;
+}
+
+.okno{
+    margin: 10px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    position: relative;
+    
+    color: rgb(119, 67, 3);
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.zavrit{
+    width: 100px ;
+    height: 50px;
+    background-color: rgba(254, 150, 64, 0.877);
+    border: solid rgba(254, 126, 22, 0.877) 7px;
+    border-radius: 10px;
+    font-size: 30px;
+    transition: all 0.2s ease;
+}
 
 
- 
+
 @media (max-width: 600px) {
-    body{
-        width: 400px;
-        
-    }
-    .hra{
-        gap: 50px;
-    }
+    /* Hra */
 
     .board {
-        width: 300px;
-        height: 300px;
+        width: 380px;
+        height: 380px;
+        margin: 100px 0px 100px 0px;
     }
 
     .pin {
-        width: 55px;
-        height: 55px;
+        width: 75px;
+        height: 75px;
         margin: 3px;
         border: solid rgba(254, 126, 22, 0.877) 5px;
     }
 
     .setting {
+        margin: 0px;
         width: 400px;
         padding: 50px;
     }
 
-    .paleta{
-        max-width: 80px;
-        
+    #paleta{
+        width: 100px;
+        height: 75px;
     }
     .color {
         width: 30px;
@@ -207,14 +253,18 @@ body {
     }
 
     .settingButtons {
-        width: 100px;
+        width: 150px;
         height: 75px;
-        font-size: 20px;
+        font-size: 50px;
         border-radius: 10px;
     }
 
+    .score{
+        width: 400px;
+    }
+
     .score2 {
-        width: 80px;
+        width: 400px;
         flex-direction: column;
         margin: 0px;
         border-radius: 10px;

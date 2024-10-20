@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="vzhled.css">
 </head>
 <body>
-    <section class="hra">
+    <section id="hra">
         
         <div class="score">
             <div class="score2">
@@ -97,19 +97,40 @@
                     </div>
                 </div>
                 <button class="settingButtons" id="buttonpaleta" onclick="barvy()">🖌️</button>
-                <button class="settingButtons">🏆</button>
-                <button class="settingButtons">❔</button>
+                <button class="settingButtons" onclick="napoveda()">❔</button>
             </div>
             
         </div>
 
     </section>
-    <section>
-
+<section id="napovedaokno">
+        <div class="okno">
+            <button class="zavrit" onclick="napoveda()">↩</button>
+            <div class="popis">
+                <h2>Jak hrát hru 2048</h2>
+                    <h3>Na PC</h3>
+                        <ul>
+                            <li>Používej šipky na klávesnici nebo klávesy W, A, S, D pro posouvání dlaždic.</li>
+                            <li>Klávesa W nebo šipka nahoru: posune všechny dlaždice nahoru.</li>
+                            <li>Klávesa S nebo šipka dulů: posune všechny dlaždice dulů.</li>
+                            <li>Klávesa A nebo šipka vlevo: posune všechny dlaždice vlevo.</li>
+                            <li>Klávesa D nebo šipka vpravo: posune všechny dlaždice vpravo.</li>
+                        </ul>
+                    
+                    <h3>Na mobilu/tabletu</h3>
+                        <ul>
+                            <li>Posuň dlaždice prstem v požadovaném směru.</li>
+                            <li>Posunutí nahoru: posune všechny dlaždice nahoru.</li>
+                            <li>Posunutí dulů: posune všechny dlaždice dulů.</li>
+                            <li>Posunutí vlevo: posune všechny dlaždice vlevo.</li>
+                            <li>Posunutí vpravo: posune všechny dlaždice vpravo.</li>
+                        </ul>
+            </div>
+        </div>
 
 
          
-    </section>
+</section>
 
     <script src="funkce.js"></script>
 </body>
