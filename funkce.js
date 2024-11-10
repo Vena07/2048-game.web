@@ -36,3 +36,36 @@ function napoveda(){
             break;
     }
 }
+
+
+let piny = ["pin11","pin12","pin13","pin14",
+    "pin21","pin22","pin23","pin24",
+    "pin31","pin32","pin33","pin34",
+    "pin41","pin42","pin43","pin44"]
+
+
+    function pridanibloku() {
+    let opakovani = true;
+
+    
+
+    while (opakovani) {
+        let rada = Math.floor(Math.random() * 4) + 1;
+        let sloupec = Math.floor(Math.random() * 4) + 1;
+        let vybraneID = "pin" + rada; 
+        vybraneID = vybraneID + sloupec; 
+        let vybranypin = document.getElementById(vybraneID);
+
+        
+        if (vybranypin && vybranypin.innerText === "") {
+            vybranypin.innerHTML = "2";
+            opakovani = false;
+        }
+
+        
+    }
+}
+
+for (let index = 0; index < 2; index++) {
+    pridanibloku();
+}

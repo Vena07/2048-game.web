@@ -148,6 +148,8 @@ body {
     background-color: rgba(254, 150, 64, 0.877);
     border: solid rgba(254, 126, 22, 0.877) 7px;
     border-radius: 16px;
+    font-size:35px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .score {
@@ -202,9 +204,7 @@ body {
     justify-content: start;
     flex-direction: column;
     position: relative;
-    
     color: rgb(119, 67, 3);
-    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
