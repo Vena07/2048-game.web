@@ -37,17 +37,8 @@ function napoveda(){
     }
 }
 
-
-let piny = ["pin11","pin12","pin13","pin14",
-    "pin21","pin22","pin23","pin24",
-    "pin31","pin32","pin33","pin34",
-    "pin41","pin42","pin43","pin44"]
-
-
-    function pridanibloku() {
+function pridanibloku() {
     let opakovani = true;
-
-    
 
     while (opakovani) {
         let rada = Math.floor(Math.random() * 4) + 1;
@@ -69,3 +60,119 @@ let piny = ["pin11","pin12","pin13","pin14",
 for (let index = 0; index < 2; index++) {
     pridanibloku();
 }
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'w' || event.key === 'W' || event.key === 'ArrowUp') {
+        Nahoru();
+    } else if (event.key === 's' || event.key === 'S' || event.key === 'ArrowDown') {
+        Dolu();
+    } else if (event.key === 'a' || event.key === 'A' || event.key === 'ArrowLeft') {
+        Vlevo();
+    } else if (event.key === 'd' || event.key === 'D' || event.key === 'ArrowRight') {
+        Vpravo();
+    }
+});
+
+function Nahoru() {
+    for (let sloupec = 1; sloupec < 5; sloupec++) {
+        for (let radek = 1; radek < 5; radek++) {
+            let pin1 = "pin" + sloupec
+            pin1 = pin1 + radek
+            let kontrola = document.getElementById(pin1)
+            if (kontrola && kontrola.innerText === "")
+                pin2 = "pin" + sloupec;
+                dalsiradek = radek + 1;
+                pin2 = pin2 + dalsiradek;
+
+
+        }
+        
+    }
+}
+
+Nahoru();
+
+function Dolu() {
+    console.log('Klávesa S nebo šipka dolů byla stisknuta!');
+}
+
+function Vlevo() {
+    console.log('Klávesa A nebo šipka vlevo byla stisknuta!');
+}
+
+function Vpravo() {
+    console.log('Klávesa D nebo šipka vpravo byla stisknuta!');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let startX;
+let startY;
+let endX;
+let endY;
+
+document.addEventListener('touchstart', function(event) {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+});
+
+document.addEventListener('touchend', function(event) {
+    endX = event.changedTouches[0].clientX;
+    endY = event.changedTouches[0].clientY;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const deltaX = endX - startX;
+    const deltaY = endY - startY;
+    
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // Vodorovný tah
+        if (deltaX > 0) {
+            // Tah doprava
+            Vpravo();
+        } else {
+            // Tah doleva
+            Vlevo();
+        }
+    } else {
+        // Svislý tah
+        if (deltaY > 0) {
+            // Tah dolů
+            Dolu();
+        } else {
+            // Tah nahoru
+            Nahoru();
+        }
+    }
+}
+
+
